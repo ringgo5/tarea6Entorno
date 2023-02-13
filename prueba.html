@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="myTable">
+    </table>
+    <script>
+      var table = document.getElementById("myTable");
+      for (var i = 0; i < 14; i++) {
+        var row = table.insertRow();
+        var cell1 = row.insertCell();
+        var cell2 = row.insertCell();
+        var cell3 = row.insertCell();
+        cell1.innerHTML = "<button>1</button>";
+        cell2.innerHTML = "<button>x</button>";
+        cell3.innerHTML = "<button>2</button>";
+      }
+    </script>
+  </body>
+</html>
