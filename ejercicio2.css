@@ -1,0 +1,84 @@
+body{
+
+
+    display: grid;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size:x-large;
+    font-style: s;
+}
+
+.contenedor{
+
+    width: 180px;
+    height: 300px;
+    background-color: rgb(222, 198, 248);
+    border-radius: 10px;
+    border: 10px solid black;
+    
+    margin: auto;
+
+}
+.resultado{
+
+    width: 100px;
+    height: 40px;
+    background-color:rgb(253, 243, 243);
+    border-radius: 10px;
+    border: 5px solid grey;
+    margin: 5px 3px 10px 5px;
+
+}
+
+.boton{
+
+    width: 40px;
+    height: 40px;
+    background-color:rgb(57, 180, 236);
+    border-radius: 10px;
+    border: 3px solid grey;
+    margin: 5px 5px 5px 5px;
+    
+}
+
+.tabla{
+
+
+    margin: auto;
+
+
+}
+.boton1{
+
+
+
+    width: 30px;
+    height: 40px;
+    background-color:rgb(226, 238, 243);
+    border-radius: 10px;
+    border: 3px solid grey;
+    margin: 3px 3px 20px 5px;
+
+
+}
+.validar{
+
+    width: 100px;
+    height: 40px;
+    background-color:rgb(253, 243, 243);
+    border-radius: 10px;
+    border: 5px solid grey;
+    margin: 1px 15px 1px 15px;
+
+}
+.ultimosBotones{
+
+
+    width: 200px;
+    height: 75px;
+   
+    display: flex;
+
+
+}
+
