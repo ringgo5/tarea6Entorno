@@ -1,4 +1,7 @@
-
+//#---) para id   .----->clases
+//si no sabemos como coger un dato, ponemos console.dir() y buscamos en los atributos. El lo usa en un select, donde para coger el valor, selecciiona y con el 
+//console, ve que en value aparece el dato que quería,con lo que ya sabe como coger ese dato.
+//con esto aprendemos que en un campo select como en un campo input--->VALUE da la opcion selecionada
 window.addEventListener('DOMContentLoaded', function () {
 
 
@@ -47,13 +50,13 @@ window.addEventListener('DOMContentLoaded', function () {
                 let filaActual = this.getAttribute("fila");
                 //console.log(filaActual)
                 
-                let botonesSeleccionados = document.querySelectorAll(".colorBoton[fila='" + filaActual + "'][style='background-color:green']");
-                //console.log(botonesSeleccionados[0])
-                console.log(botonesSeleccionados.length)
-                if (botonesSeleccionados.length===0) {
-                  this.style.backgroundColor = "green";
-                  console.log(botonesSeleccionados.length)
+                let botones = document.querySelectorAll(".colorBoton[fila='" + filaActual + "']");
+                for(let i=0;i<botones.length;i++){
+                    botones[i].style.backgroundColor="";
                 }
+                //console.log(botonesSeleccionados[0])
+                this.style.backgroundColor = "green";
+                
               });
           }
         contenedor.append(label);
@@ -116,12 +119,13 @@ function mostrar(){
             alert("Debe introducir 14 dígitos");
             
         }else{
-            alert("COntraseña incorrecta");
+            alert("Contraseña incorrecta");
         }
     
 
 }
 
+//errores preguntas: porque la funciona comprobar va con el input de resultado. Porque se marca mas de un cuadrado en verde
 
 
 

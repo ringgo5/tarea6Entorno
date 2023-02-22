@@ -24,18 +24,12 @@ resultados.maxLength = "8";
 resultado.classList.add('resultado');
 contenedor.classList.add('contenedor');
 //contenedor.textContent="hola";
-
-
-
 //añadimos:
 
 document.body.append(contenedor);
 contenedor.prepend(resultado);
 
 //Creamos la tabla:
-
-
-
 for (let x = 0; x < 3; x++) {
     let columnas = document.createElement('tr');
 
@@ -71,39 +65,44 @@ for(let x=0;x<=botones.length -2;x++){  //recorro el array de botones y le agreg
 
 
 //creamos el array que se mostrará en el input de arriba: 
-
-
 for (let x = 0; x <= botones.length - 1; x++) {  
             let resultado = document.querySelector('.resultado');
-                botones[x].addEventListener('click', function () { //añadimos la función de todos los botones
-                    resultados.push(botones[x].textContent); //añado cada número que apriete
-                    resultado.textContent = resultados.join(''); //junto el array en modo de cadena, para ver sólo números
-        })
-    
-
+                botones[x].addEventListener('click', 
+                    function () { //añadimos la función de todos los botones
+                        resultados.push(botones[x].textContent); //añado cada número que apriete
+                        resultado.textContent = resultados.join(''); //junto el array en modo de cadena, para ver sólo números
+                    }
+                );
 }
-
 //funciones:
 
 //funcion de C : 
-boton1.addEventListener('click', function () {
+boton1.addEventListener('click', 
+    function () {
 
 
-        // console.log(resultado.textContent)
-        //console.log(resultados)
-        
-    let numeros = parseInt(resultado.textContent);
-    console.log(numeros);
-    let numeros2 = String(numeros).split("").map((numeros) => {
-        return Number(numeros)
-    })//con esta funcion paso a Array el número
-        numeros2.pop();//quitamos la ultima cifra
-        numeros = numeros2.join('')
-        console.log(numeros2)
-        resultados= numeros2;
-        resultado.textContent = numeros;
-    //Este paso también me costó un poco de tiempo conseguirlo, después de muchos consol.log, pude arregrarlo
-})
+            // console.log(resultado.textContent)
+            //console.log(resultados)
+            
+        if( !isNaN(resultado.textContent) ){
+            
+            let numeros = parseInt(resultado.textContent);
+            console.log(numeros);
+            let numeros2 = String(numeros).split("").map((numeros) => {
+                return Number(numeros)
+            })//con esta funcion paso a Array el número
+                numeros2.pop();//quitamos la ultima cifra
+                numeros = numeros2.join('')
+                console.log(numeros2)
+                resultados= numeros2;
+                resultado.textContent = numeros;
+            //Este paso también me costó un poco de tiempo conseguirlo, después de muchos consol.log, pude arregrarlo
+        }
+        else{
+            resultado.textContent = "";
+        }
+    }
+);
 
 //funcion de validar : 
 
@@ -132,12 +131,12 @@ function validar(){
         alert("debe introducir 4 cifras");
         resultados = [];//aquí también reinicio la clave
     }
-resultados = []; //reiniciamos la clave
-clave.textContent =""; //pongo en blanco de nuevo la caja de texto
+    resultados = []; //reiniciamos la clave
+    clave.textContent =""; //pongo en blanco de nuevo la caja de texto
 }
 
 
-
+//preguntas. Error de c al marcarlo primero. Hacer que sólo se introduzcan que quepan en la caja de texto
 
 
 
